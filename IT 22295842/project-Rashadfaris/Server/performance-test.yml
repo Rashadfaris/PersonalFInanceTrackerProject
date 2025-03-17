@@ -1,0 +1,13 @@
+config:
+  target: "http://localhost:5000"
+  phases:
+    - duration: 60   # Run for 60 seconds
+      arrivalRate: 10 # 10 requests per second
+
+scenarios:
+  - flow:
+      - post:
+          url: "/api/auth/login"
+          json:
+            email: "it22295842@my.sliit.lk"
+            password: "pass"
